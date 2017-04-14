@@ -1,3 +1,4 @@
+# coding: utf-8
 """
 GestaltBoardで作成したプロッターをDXFファイルの図通りに動かすためのプログラム。
 このプログラムはFabAcademy2017のMachine Designの課題のために作成
