@@ -21,11 +21,25 @@ def get_xy(file):
     for polyline in polylines:
         xy_points = [list(point[0:2]) for point in polyline.points]
         xy_points_list.append(xy_points)
+    new_xy_list = [x for l in xy_points_list for x in l]
+    result_list = []
+    convert_int(new_xy_list, result_list)
 
-    return xy_points_list
+    return result_list[0]
+
+
+def convert_int(input, output):
+    point_list = []
+    for point in input:
+        param_list = []
+        for param in point:
+            param = int(param)
+            param_list.append(param)
+        point_list.append(param_list)
+    output.append(point_list)
 
 
 if __name__ == '__main__':
-    file = './data/cat.dxf'
+    file = '../sampledata/cat.dxf'
     points = get_xy(file)
     print(points)
