@@ -1,0 +1,7 @@
+setup.py
+dxfconverter/DXFConverter.py
+dxfconverter/__init__.py
+dxfconverter.egg-info/PKG-INFO
+dxfconverter.egg-info/SOURCES.txt
+dxfconverter.egg-info/dependency_links.txt
+dxfconverter.egg-info/top_level.txt

@@ -8,7 +8,7 @@ Date : 2017/04/07
 import dxfgrabber
 
 
-def get_xy_points(file):
+def get_xy(file):
     """
     DXF形式で頂点のある図形のデータを渡すと、頂点のx,y座標をタプルで格納したリストを返す
     :param file: dxf file
@@ -27,5 +27,5 @@ def get_xy_points(file):
 
 if __name__ == '__main__':
     file = './data/cat.dxf'
-    points = get_xy_points(file)
+    points = get_xy(file)
     print(points)
