@@ -16,12 +16,16 @@ def get_xy_points(file):
     """
     dxf = dxfgrabber.readfile(file)
     entities = dxf.entities
-    # list of x,y,z coodinates
-    xyz_points = [entity.points for entity in entities]
-    # list of x,y coodinates
-    # list_of_vertices[0] == ２次元配列のうち利用するのは最初の一つだけ。
-    xy_points = [vertex[0:2] for vertex in xyz_points[0]]
+    polylines = [entity for entity in entities if entity.dxftype == 'POLYLINE']
+    xy_points_list = []
+    for polyline in polylines:
+        xy_points = [list(point[0:2]) for point in polyline.points]
+        xy_points_list.append(xy_points)
 
-    return xy_points
+    return xy_points_list
 
 
+if __name__ == '__main__':
+    file = './data/cat.dxf'
+    points = get_xy_points(file)
+    print(points)
