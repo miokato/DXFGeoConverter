@@ -10,10 +10,10 @@ $ python setup.py develop
 
 $ python
 
->>> from dxfconverter import DXFConverter as df
+from dxfconverter import DXFConverter as df
 
->>> file = './sampledata/cat.dxf'
+file = './sampledata/cat.dxf'
 
->>> df.get_xy(file)
+df.get_xy(file)
 
 
